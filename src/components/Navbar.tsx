@@ -37,10 +37,10 @@ export default function Navbar() {
         {/* 🔹 Logo */}
         <Link href="/" className="flex items-center space-x-2 group">
           <Image
-            src="/logo.jpg"
+            src="/logo.svg"
             alt="Ratel Networks Logo"
-            width={50}
-            height={50}
+            width={80}
+            height={80}
             className="rounded-full group-hover:scale-105 transition-transform"
             priority
           />
