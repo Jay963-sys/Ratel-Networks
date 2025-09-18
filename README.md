@@ -34,3 +34,64 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+```
+ratel-networks
+├─ eslint.config.mjs
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  ├─ about.jpg
+│  ├─ avaya.png
+│  ├─ aws.png
+│  ├─ cisco.png
+│  ├─ company.jpg
+│  ├─ dell.png
+│  ├─ file.svg
+│  ├─ fortinet.png
+│  ├─ globe.svg
+│  ├─ google.png
+│  ├─ Huawei.png
+│  ├─ logo.svg
+│  ├─ microsoft.png
+│  ├─ mikrotik.png
+│  ├─ next.svg
+│  ├─ section.jpg
+│  ├─ services.jpg
+│  ├─ stats.jpg
+│  ├─ test.jpg
+│  ├─ ubiquiti.png
+│  ├─ vercel.svg
+│  └─ window.svg
+├─ README.md
+├─ src
+│  ├─ app
+│  │  ├─ about
+│  │  │  └─ page.tsx
+│  │  ├─ api
+│  │  │  └─ contact
+│  │  │     └─ route.ts
+│  │  ├─ contact
+│  │  │  └─ page.tsx
+│  │  ├─ favicon.ico
+│  │  ├─ globals.css
+│  │  ├─ layout.tsx
+│  │  ├─ page.tsx
+│  │  └─ services
+│  │     └─ page.tsx
+│  └─ components
+│     ├─ AboutPreview.tsx
+│     ├─ Contact.tsx
+│     ├─ ContactForm.tsx
+│     ├─ Footer.tsx
+│     ├─ Hero.tsx
+│     ├─ Navbar.tsx
+│     ├─ ServiceCard.tsx
+│     ├─ Services.tsx
+│     └─ StatsSection.tsx
+├─ tailwind.config.js
+└─ tsconfig.json
+
+```
