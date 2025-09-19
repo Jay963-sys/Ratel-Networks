@@ -35,13 +35,13 @@ export default function AboutPreview() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-5xl font-bold mb-8 leading-tight">
-            About <span className="text-primary">Ratel Networks</span>
+            About <span className="text-primary"></span>
           </h2>
           <p className="text-gray-100 mb-8 text-lg leading-relaxed">
-            At Ratel Networks, we believe connectivity is the backbone of modern
-            innovation. Our mission is to deliver reliable, secure, and scalable
-            IT solutions that empower businesses and individuals to thrive in
-            the digital era.
+            At Ratel Networks Limited, we believe connectivity is the backbone
+            of modern innovation. Our mission is to deliver reliable, secure,
+            and scalable IT solutions that empower businesses and individuals to
+            thrive in the digital era.
           </p>
           <p className="text-gray-200 mb-10 text-base leading-relaxed">
             With a focus on internet services, cloud solutions, cybersecurity,

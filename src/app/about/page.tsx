@@ -39,7 +39,7 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl font-bold text-center text-primary mb-6"
         >
-          About <span className="text-white">Ratel Networks</span>
+          <span className="text-white">Ratel Networks Limited</span>
         </motion.h1>
 
         <motion.p
@@ -49,7 +49,7 @@ export default function AboutPage() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-gray-300 text-center max-w-4xl mx-auto mb-12"
         >
-          At Ratel Networks, we believe connectivity is the backbone of modern
+          At Ratel Networks Limited, we believe connectivity is the backbone of
           innovation. Our mission is to deliver reliable, secure, and scalable
           IT solutions that empower businesses and individuals to thrive in the
           digital era.

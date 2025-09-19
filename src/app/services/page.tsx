@@ -96,7 +96,11 @@ export default function ServicesPage() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-gray-300 max-w-3xl mx-auto text-lg mb-16"
         >
-          At <span className="text-primary font-semibold"> Ratel Networks</span>
+          At{" "}
+          <span className="text-primary font-semibold">
+            {" "}
+            Ratel Networks Limited
+          </span>
           , we deliver cutting-edge IT solutions that keep you connected,
           secure, and future-ready. From cloud migration to network management,
           our services are built to empower your business growth.

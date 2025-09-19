@@ -23,8 +23,10 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <p className="text-sm md:text-base">
             © {new Date().getFullYear()}{" "}
-            <span className="text-white font-semibold">Ratel Networks</span>.
-            All rights reserved.
+            <span className="text-white font-semibold">
+              Ratel Networks Limited
+            </span>
+            . All rights reserved.
           </p>
           <p className="text-xs mt-2">
             Created by{" "}

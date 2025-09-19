@@ -45,7 +45,7 @@ export default function Navbar() {
             priority
           />
           <span className="text-white font-bold text-lg hidden sm:block group-hover:text-blue-500 transition">
-            Ratel Networks
+            Ratel Networks Limited
           </span>
         </Link>
 

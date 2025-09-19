@@ -101,8 +101,8 @@ export default function Services() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-gray-300 text-center mt-5 max-w-2xl mx-auto text-lg"
         >
-          Ratel Networks delivers next-gen IT and internet solutions that help
-          businesses stay connected, secure, and future-ready.
+          Ratel Networks Limited delivers next-gen IT and internet solutions
+          that help businesses stay connected, secure, and future-ready.
         </motion.p>
 
         {/* Service Grid */}
@@ -130,7 +130,7 @@ export default function Services() {
           className="mt-24 text-center"
         >
           <h3 className="text-2xl font-semibold text-white mb-8">
-            Ready to transform your business with Ratel Networks?
+            Ready to transform your business with Ratel Networks Limited?
           </h3>
           <Link
             href="/contact"

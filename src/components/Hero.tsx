@@ -47,7 +47,7 @@ export default function Hero() {
 
           {/* Title */}
           <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#e1e8f1] to-[#a8b2c9] drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-            Ratel Networks
+            Ratel Networks Limited
           </span>
 
           {/* Animated underline */}
