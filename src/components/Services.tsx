@@ -18,49 +18,49 @@ import Link from "next/link";
 export default function Services() {
   const services = [
     {
-      icon: <Wifi className="w-10 h-10 text-primary" />,
+      icon: <Wifi className="w-10 h-10 text-[#FF6B00]" />,
       title: "Internet Services",
       description:
         "High-speed, reliable connectivity tailored for businesses and enterprises.",
     },
     {
-      icon: <Cloud className="w-10 h-10 text-primary" />,
+      icon: <Cloud className="w-10 h-10 text-[#FF6B00]" />,
       title: "Cloud Solutions",
       description:
         "Scalable cloud migration, hosting, and infrastructure management.",
     },
     {
-      icon: <Shield className="w-10 h-10 text-primary" />,
+      icon: <Shield className="w-10 h-10 text-[#FF6B00]" />,
       title: "Cybersecurity",
       description:
         "Advanced security monitoring and protection against evolving threats.",
     },
     {
-      icon: <Headphones className="w-10 h-10 text-primary" />,
+      icon: <Headphones className="w-10 h-10 text-[#FF6B00]" />,
       title: "24/7 IT Support",
       description:
         "Dedicated technical assistance and managed IT services around the clock.",
     },
     {
-      icon: <Server className="w-10 h-10 text-primary" />,
+      icon: <Server className="w-10 h-10 text-[#FF6B00]" />,
       title: "Data Center Solutions",
       description:
         "Robust, secure data center infrastructure for mission-critical workloads.",
     },
     {
-      icon: <Globe className="w-10 h-10 text-primary" />,
+      icon: <Globe className="w-10 h-10 text-[#FF6B00]" />,
       title: "Network Solutions",
       description:
         "Enterprise-grade networking and WAN solutions to power your operations.",
     },
     {
-      icon: <Monitor className="w-10 h-10 text-primary" />,
+      icon: <Monitor className="w-10 h-10 text-[#FF6B00]" />,
       title: "IT Consulting",
       description:
         "Expert guidance to align your IT strategy with business goals.",
     },
     {
-      icon: <PhoneCall className="w-10 h-10 text-primary" />,
+      icon: <PhoneCall className="w-10 h-10 text-[#FF6B00]" />,
       title: "Unified Communications",
       description:
         "Seamless communication platforms integrating voice, video, and messaging.",
@@ -68,19 +68,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="relative py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <Image
-          src="/joy.jpg"
-          alt="Services Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/70" />
-      </div>
-
+    <section className="relative py-28 bg-white">
       <div className="relative max-w-7xl mx-auto px-6 z-10">
         {/* Heading */}
         <motion.h2
@@ -88,9 +76,11 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-extrabold text-center text-white"
+          className="text-4xl md:text-5xl font-extrabold text-center text-gray-900"
         >
-          Our <span className="text-primary">Services</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#FF914D]">
+            Our Services
+          </span>
         </motion.h2>
 
         {/* Subtext */}
@@ -99,7 +89,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-gray-300 text-center mt-5 max-w-2xl mx-auto text-lg"
+          className="text-gray-600 text-center mt-5 max-w-2xl mx-auto text-lg"
         >
           Ratel Networks Limited delivers next-gen IT and internet solutions
           that help businesses stay connected, secure, and future-ready.
@@ -113,8 +103,8 @@ export default function Services() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              whileHover={{ scale: 1.05 }}
+              transition={{ delay: i * 0.08, duration: 0.6 }}
+              whileHover={{ scale: 1.04 }}
             >
               <ServiceCard {...service} />
             </motion.div>
@@ -129,12 +119,13 @@ export default function Services() {
           transition={{ delay: 0.8, duration: 0.7 }}
           className="mt-24 text-center"
         >
-          <h3 className="text-2xl font-semibold text-white mb-8">
+          <h3 className="text-2xl font-semibold text-gray-900 mb-8">
             Ready to transform your business with Ratel Networks Limited?
           </h3>
+
           <Link
             href="/contact"
-            className="px-8 py-4 bg-[#0D6EFD] text-white font-semibold rounded-2xl shadow-lg hover:bg-[#0B5ED7] hover:scale-105 transition-transform duration-300"
+            className="px-8 py-4 bg-[#FF6B00] text-white font-semibold rounded-2xl shadow-lg hover:bg-[#e46200] hover:scale-105 transition-transform duration-300"
           >
             Get Started Today
           </Link>

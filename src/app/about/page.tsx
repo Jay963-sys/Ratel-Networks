@@ -12,34 +12,22 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="relative py-32 overflow-hidden">
-      {/* Background with parallax zoom */}
-      <motion.div
-        initial={{ scale: 1.1, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="absolute inset-0"
-      >
-        <Image
-          src="/jay.jpg"
-          alt="Services Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/80" />
-      </motion.div>
+    <main className="relative py-32 bg-white text-gray-800 overflow-hidden">
+      {/* Light Background */}
+      <div className="absolute inset-0 opacity-10">
+        <Image src="/jay.jpg" alt="Background" fill className="object-cover" />
+      </div>
 
-      <section className="relative py-20 max-w-6xl mx-auto px-4">
+      <section className="relative py-20 max-w-6xl mx-auto px-6">
         {/* Intro */}
         <motion.h1
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold text-center text-primary mb-6"
+          className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6"
         >
-          <span className="text-white">Ratel Networks Limited</span>
+          Ratel Networks Limited
         </motion.h1>
 
         <motion.p
@@ -47,7 +35,7 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-gray-300 text-center max-w-4xl mx-auto mb-12"
+          className="text-gray-600 text-center max-w-4xl mx-auto mb-12"
         >
           At Ratel Networks Limited, we believe connectivity is the backbone of
           innovation. Our mission is to deliver reliable, secure, and scalable
@@ -71,37 +59,29 @@ export default function AboutPage() {
           className="grid md:grid-cols-2 gap-12 items-center mb-20"
         >
           <motion.div variants={fadeUp}>
-            <h2 className="text-2xl font-semibold text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-orange-500 mb-4">
               Our Vision 🌍
             </h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-700 mb-6">
               To be Africa&apos;s most trusted and innovative IT solutions
               provider, empowering individuals, businesses, and communities
-              through seamless connectivity and cutting-edge technology. We
-              envision a future where every organization, regardless of size,
-              has access to secure, scalable, and world-class digital
-              infrastructure that drives growth, fosters innovation, and
-              connects people without limits.
+              through seamless connectivity and cutting-edge technology.
             </p>
 
-            <h2 className="text-2xl font-semibold text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-orange-500 mb-4">
               Our Mission 🚀
             </h2>
-            <p className="text-gray-300">
-              Our mission is to deliver reliable internet services, robust cloud
-              solutions, advanced cybersecurity, and 24/7 IT support tailored to
-              the evolving needs of our clients. We are committed to building
-              lasting partnerships by providing exceptional service, driving
-              digital transformation, and ensuring business continuity through
-              innovation, integrity, and excellence. At Ratel Networks, we exist
-              to bridge the digital divide and create opportunities for
-              businesses and individuals to thrive in a fast-changing world.
+            <p className="text-gray-700">
+              Deliver reliable internet, robust cloud solutions, advanced
+              cybersecurity, and 24/7 IT support. We build lasting partnerships,
+              drive digital transformation, and ensure business continuity with
+              integrity and excellence.
             </p>
           </motion.div>
 
           <motion.div
             variants={fadeUp}
-            className="relative w-full h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/30"
+            className="relative w-full h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg border border-orange-200"
           >
             <Image
               src="/team.jpg"
@@ -119,7 +99,7 @@ export default function AboutPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl font-bold text-primary mb-10"
+            className="text-3xl font-bold text-orange-500 mb-10"
           >
             Our Values
           </motion.h2>
@@ -131,9 +111,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             variants={{
               hidden: {},
-              visible: {
-                transition: { staggerChildren: 0.2 },
-              },
+              visible: { transition: { staggerChildren: 0.2 } },
             }}
           >
             {[
@@ -162,11 +140,11 @@ export default function AboutPage() {
                 key={i}
                 variants={fadeUp}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="flex flex-col items-center bg-white/5 p-6 rounded-xl shadow-lg hover:shadow-primary/20 transition-shadow"
+                className="flex flex-col items-center bg-orange-50 p-6 rounded-xl shadow hover:shadow-orange-200 transition-shadow"
               >
-                <value.Icon className="w-10 h-10 text-primary mb-4" />
+                <value.Icon className="w-10 h-10 text-orange-500 mb-4" />
                 <h3 className="font-semibold text-lg">{value.title}</h3>
-                <p className="text-gray-400 text-sm mt-2">{value.text}</p>
+                <p className="text-gray-600 text-sm mt-2">{value.text}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -180,14 +158,16 @@ export default function AboutPage() {
           viewport={{ once: true }}
           className="py-16 text-center"
         >
-          <h2 className="text-3xl font-bold mb-6">Partner With Us</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Partner With Us
+          </h2>
+          <p className="text-gray-700 max-w-2xl mx-auto mb-8">
             Together, we can shape the future of connectivity and empower
             businesses across Africa and beyond.
           </p>
           <Link
             href="/contact"
-            className="px-8 py-4 border-2 border-[#0D6EFD] text-[#0D6EFD] font-semibold rounded-2xl hover:bg-[#0D6EFD] hover:text-white hover:scale-105 transition-transform duration-300"
+            className="px-8 py-4 border-2 border-orange-500 text-orange-500 font-semibold rounded-2xl hover:bg-orange-500 hover:text-white hover:scale-105 transition-transform duration-300"
           >
             📩 Contact Us
           </Link>

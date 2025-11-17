@@ -30,15 +30,18 @@ export default function StatsSection() {
   // Count-up animation
   useEffect(() => {
     if (!inView) return;
+
     const intervals = stats.map((stat, i) => {
       let current = 0;
       const increment = Math.ceil(stat.number / 60);
+
       return setInterval(() => {
         current += increment;
         if (current >= stat.number) {
           current = stat.number;
           clearInterval(intervals[i]);
         }
+
         setCounts((prev) => {
           const updated = [...prev];
           updated[i] = current;
@@ -46,9 +49,11 @@ export default function StatsSection() {
         });
       }, 30);
     });
+
     return () => intervals.forEach((int) => clearInterval(int));
   }, [inView]);
 
+  // Detect scroll into view
   useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById("stats-section");
@@ -66,31 +71,19 @@ export default function StatsSection() {
   return (
     <section
       id="stats-section"
-      className="relative min-h-[100vh] py-40 bg-black text-white overflow-hidden"
+      className="relative py-32 bg-white text-gray-900"
     >
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/pip.jpg"
-          alt="Background"
-          fill
-          sizes="100vw"
-          priority
-          quality={85}
-          className="object-cover"
-        />
-        <div className="absolute inset-0 z-10 bg-black/70" />
-      </div>
-
-      <div className="relative z-20 max-w-7xl mx-auto px-4">
-        {/* Section Title */}
+      <div className="relative max-w-7xl mx-auto px-4">
+        {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center text-primary mb-20 drop-shadow-lg"
+          className="text-3xl md:text-4xl font-extrabold text-center mb-20"
         >
-          Trusted by Businesses Worldwide
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#FF914D]">
+            Trusted by Businesses Worldwide
+          </span>
         </motion.h2>
 
         {/* Stats Cards */}
@@ -102,13 +95,13 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-lg border border-white/20 hover:border-primary/50 transition"
+              className="bg-white rounded-xl p-10 shadow-md border border-gray-200 hover:shadow-xl hover:border-[#FF6B00] transition-all"
             >
-              <p className="text-5xl font-extrabold text-primary drop-shadow-md">
+              <p className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#FF914D]">
                 {counts[index]}
                 {stat.suffix}
               </p>
-              <p className="text-gray-100 mt-3 font-medium">{stat.label}</p>
+              <p className="text-gray-700 mt-3 font-medium">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -118,12 +111,12 @@ export default function StatsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl font-semibold text-center text-white mb-12 drop-shadow-lg"
+          className="text-2xl md:text-3xl font-semibold text-center mb-12"
         >
           Our Trusted Partners
         </motion.h3>
 
-        {/* Partners Logos */}
+        {/* Partner Logos */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -133,8 +126,11 @@ export default function StatsSection() {
           {partners.map((logo, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.1, borderColor: "#3b82f6" }}
-              className="w-32 h-20 relative bg-white/10 backdrop-blur-md rounded-lg p-3 shadow-md border border-white/20 flex items-center justify-center transition"
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0 8px 25px rgba(255, 107, 0, 0.25)",
+              }}
+              className="w-32 h-20 relative bg-white rounded-lg p-4 shadow-sm border border-gray-200 flex items-center justify-center transition-all"
             >
               <Image
                 src={logo}
