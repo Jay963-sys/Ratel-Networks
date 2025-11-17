@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   title: "Ratel Networks",
   description: "IT Solutions & Internet Services",
   icons: {
-    icon: "/logo.jpg",
-    shortcut: "/logo.jpg",
-    apple: "/logo.jpg",
+    icon: "/logo1.jpg",
+    shortcut: "/logo1.jpg",
+    apple: "/logo1.jpg",
   },
 };
 
